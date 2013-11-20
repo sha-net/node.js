@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My New Page with Nav</title>
+		<style>
+			.nav {
+				color: red
+			}
+		nav {
+			display: block;
+			background-color: blue
+			}
+		</style>
+		<script>
+			document.createElement('nav');
+		</script>
+		<script>
+			if(document.myForm.checkValidity() === false){
+				alert('fail');
+			}
+		</script>
+	</head>
+	<body>
+<form name="myForm">
+Quantity (between 1 and 5):
+<input type="number" name="quantity" min="1"max="5" oninput="updateMessage(this)"/>
+Enter Your Email: <input type="email" name="myEmail" formnovalidate />
+<input type="submit" />
+</form>
+	<script>
+		myForm.quantity.setCustomValidity('looks like your numbers ... between one and five')
+		function updateMessage(input){
+			if(input.value ==""){}
+			input.setCustomValidity('');
+		}
+	</script>	
+</body>
+</html>
+
